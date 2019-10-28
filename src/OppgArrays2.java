@@ -81,7 +81,7 @@ public class OppgArrays2 {
         }
 
         for(int i : d){
-            System.out.print(i+" ");
+          //  System.out.print(i+" ");
         }
 
         /**
@@ -93,11 +93,31 @@ public class OppgArrays2 {
          * Lag et program som beregner gjennomsnittlig "score" for de 4 forskjellige filmene og skriver ut resultatet.
          */
 
+        int film [] [] ={{4,6,2,5},{7,9,4,8},{6,9,3,7}};
+
+
+        for (int i = 0; i < 4; i++){
+            double kolSum = 0;
+            double gjsnitt = 0;
+            int teller = 0;
+            for (int j=0; j < 3; j++){
+                kolSum += film[j][i];
+                teller++;
+            }
+
+            gjsnitt = kolSum/teller;
+
+            System.out.println(i + " column average: " + gjsnitt);
+        }
+
+
 
         /**
-         * Utvid oppgave 6 til også å lese inn matrisen (det to-dimensjonale arrayet) fra brukeren. Først skal man kunne lese inn antall anmeldere (rader) og antall filmer (kolonner). Så skal arrayet defineres og man skal lese inn "scores".
-         *
-         * Bruk gjerne try/catch for å sikre at man leser inn korrekte tall. Sjekk også om tallene er mellom 0 og 9.
+         * Utvid oppgave 6 til også å lese inn matrisen (det to-dimensjonale arrayet) fra brukeren.
+         * Først skal man kunne lese inn antall anmeldere (rader) og antall filmer (kolonner).
+         * Så skal arrayet defineres og man skal lese inn "scores".
+         * Bruk gjerne try/catch for å sikre at man leser inn korrekte tall.
+         * Sjekk også om tallene er mellom 0 og 9.
          */
 
 
